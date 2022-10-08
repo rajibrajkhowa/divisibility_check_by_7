@@ -1,13 +1,7 @@
 use std::io;
 use std::process::exit;
 
-fn main() {
-
-    let mut n = String::new();
-    println!("Please enter the number:to be tested for divisibility by 7");
-    io::stdin().read_line(&mut n).expect("Number not entered");
-    let n: i64 = n.trim().parse().expect("Please type a number");
-    
+fn is_divisible_by_7(n: i64) {
     if n == 7 {
         println!("The number entered is 7 which is divisible by 7");
         exit(0);
@@ -35,4 +29,12 @@ fn main() {
             c = a-(2*b);
         }
     }
+}
+
+fn main() {
+    let mut n = String::new();
+    println!("Please enter the number:to be tested for divisibility by 7");
+    io::stdin().read_line(&mut n).expect("Number not entered");
+    let n: i64 = n.trim().parse().expect("Please type a number");
+    is_divisible_by_7(n);
 }
