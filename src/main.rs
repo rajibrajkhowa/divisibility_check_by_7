@@ -18,7 +18,7 @@ fn is_divisible_by_7(n: i64) {
             println!("The number {} is divisible by 7", n);
             break;
         }
-        else if c != 0 && c < 10 {
+        else if c < 10 && (c != 0 || c !=7 || c!=-7)  {
 
             println!("The number {} is not divisible by 7", n);
             break;
